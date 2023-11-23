@@ -1,0 +1,15 @@
+<p>
+<a href="#" (click)=" expandall()">Expand all</a>
+</p>
+<p>
+<a href="#" (click)="Favourite()">Favourite all</a>
+</p>
+<app-block-post 
+#post11 
+Education="BE Mechanical"  From="Sivakasi"  
+*ngFor="let post of blockpost[CurrentPage]"
+[post1]="post"></app-block-post>]
+<!--<app-block-post [post1]="blockpost[0][0]" #post></app-block-post>-->
+
+<app-paginator [numberOfPages]="blockpost.length" (pageNumberclicked)=" updatePage($event)"></app-paginator>
+
